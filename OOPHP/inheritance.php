@@ -68,7 +68,7 @@ $produk1 = new Komik(
     'Naruto',
     'Masashi Kishimoto',
     'Shonen Jump',
-    30000,
+    300000,
     100,
     0
 );

@@ -48,7 +48,9 @@ class Game extends Produk
 {
     public function getInfoProduk()
     {
-        $str = "Game : {$this->getInfoProduk()} - {$this->waktuMain} Jam.";
+        // Memanggil method getInfoProduk dari parent class
+        $str =
+            'Game : ' . parent::getInfoProduk() . " - {$this->waktuMain} Jam.";
         return $str;
     }
 }
@@ -66,23 +68,25 @@ $produk1 = new Komik(
     'Naruto',
     'Masashi Kishimoto',
     'Shonen Jump',
-    250000,
-    150,
+    30000,
+    100,
     0
 );
 $produk2 = new Game(
     'Uncharted',
     'Neil Druckmann',
     'Sony Computer',
-    350000,
+    250000,
     0,
     50
 );
 
-//Komik : Naruto | Masashi Kishimoto | Shonen Jump | (Rp. 250000) - 150 Halaman.
-// Game : Uncharted | Neil Druckmann | Sony Computer | (Rp. 350000) - 50 Jam.
+// Output yang diharapkan
+// Komik : Naruto | Masashi Kishimoto | Shonen Jump | (Rp. 30000) - 100 Halaman.
+// Game : Uncharted | Neil Druckmann | Sony Computer | (Rp. 250000) - 50 Jam.
 
 echo $produk1->getInfoProduk();
 echo '<br>';
 echo $produk2->getInfoProduk();
+
 ?>

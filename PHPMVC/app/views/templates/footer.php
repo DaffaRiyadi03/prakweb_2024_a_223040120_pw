@@ -1,1 +1,5 @@
-<h1>Selamat datang di website saya</h1>
+<script src="<?= BASEURL ?>/js/bootstrap.js"></script>
+
+</body>
+
+</html>

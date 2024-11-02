@@ -10,7 +10,8 @@
 
         <div class="col-6">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#forModal">
+            <button type="button" class="btn btn-primary tombolTambahData" data-bs-toggle="modal"
+                data-bs-target="#forModal">
                 Tambah data mahasiswa
             </button>
             <hr>
@@ -20,8 +21,11 @@
                     <li class="list-group-item">
                         <?= $mhs['nama']; ?>
                         <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>"
-                            class="badge bg-primary float-right ml-1">detail</a>
-                        <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge bg-danger float-right"
+                            class="badge bg-primary float-end ms-1">detail</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>"
+                            class="badge bg-success float-end ms-1 tampilModalUbah" data-bs-toggle="modal"
+                            data-bs-target="#formModal" data-id="<?= $mhs['id']; ?>">ubah</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge bg-danger float-end"
                             onclick="return confirm('yakin?');">hapus</a>
                     </li>
                 <?php endforeach; ?>
@@ -35,7 +39,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="judulModal">Tambah data mahasiswa</h1>
+                <h1 class="modal-title fs-5" id="foromModalLabel">Tambah data mahasiswa</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
